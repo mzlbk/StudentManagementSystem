@@ -15,9 +15,9 @@ public class ClassroomNo extends Areas
     {
         this.classroomCode = 0;
     }
-    public ClassroomNo(String areasName, int classroomCode)
+    public ClassroomNo(int arasCode, int classroomCode)
     {
-        super(areasName);
+        super(arasCode);
         this.classroomCode = classroomCode;
     }
 }

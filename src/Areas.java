@@ -1,24 +1,22 @@
 public class Areas
 {
-    private String areasName;
+    private int areasCode;
 
-    public String getAreasName()
-    {
-        return areasName;
+    public int getAreasCode() {
+        return areasCode;
     }
 
-    public void setAreasName(String areasName)
-    {
-        this.areasName = areasName;
+    public void setAreasCode(int areasCode) {
+        this.areasCode = areasCode;
     }
 
     public Areas()
     {
-        String areasName = "NULL";
+        int areasCode = 0;
     }
 
-    public Areas(String areasName)
+    public Areas(int areasCode)
     {
-        areasName = this.areasName;
+        areasCode = this.areasCode;
     }
 }
