@@ -10,6 +10,14 @@ public abstract class Students {
 
     private HashMap<Courses, String> takenCourses = new HashMap<>();
 
+    public Students()
+    {
+        this.ID = 0;
+        this.name = "NULL";
+        this.surname = "NULL";
+        this.year = 0;
+    }
+
     public Students(int id, String name, String surname, int year) {
         this.ID = id;
         this.name = name;
@@ -100,13 +108,14 @@ public abstract class Students {
     }
 
     //BURAYA DA BAK YAPAMADIM
+
     public void AddStudent(Secretary ofStudent)
     {
         //ofStudent.addStudent(this);
         secretaryArrayList.add(ofStudent);
     }
 
-    //BURAYA DA BAK HİÇBİR BOK YAPAMADIM ÖZÜR DİLERİM
+    //BURAYA DA BAK HİÇBİR BOK YAPAMADIM ÖZÜR DİLERİM / NP
     private String ListCourses(HashMap takenCourses)
     {
         String s = "s";
