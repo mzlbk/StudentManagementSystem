@@ -1,7 +1,12 @@
 public class Secretary extends Staff
 {
-    public void KANKA()
+    public Secretary(int staffID, String staffWorkInformation, int staffWorkHour)
     {
-        System.out.println("POLİMORFİZM KANKA POLİMORFİZM");
+        super(staffID,staffWorkInformation,staffWorkHour);
+    }
+    private void addCourse(Lecturer lecturer){
+        if(lecturer.getCourseList().size()>=10){
+            System.out.println("This lecturer can not get more course");
+        }
     }
 }

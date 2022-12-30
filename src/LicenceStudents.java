@@ -5,9 +5,5 @@ public class LicenceStudents extends Students
         super(id, name, surname, year);
         this.gradeAvarage=gradeAvarage;
     }
-    @Override
-    public void addCourses(Courses courses)
-    {
-        System.out.println("POLİMORFİZM KANKA POLİMORFİZM");
-    }
+
 }

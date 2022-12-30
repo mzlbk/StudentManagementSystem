@@ -5,7 +5,7 @@ public class DoctoraStudents extends Students
         super(id, name, surname, year);
         this.degree=degree;
     }
-    @Override
+    //@Override
     public void addCourses(Courses courses) {
 
     }

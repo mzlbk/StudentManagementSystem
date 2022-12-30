@@ -1,6 +1,6 @@
 public class HeadOfDepartment extends Lecturer
 {
-    public HeadOfDepartment(int staffID, String staffWorkInformation, int staffWorkHour ,String lecturerName, String lecturerSurname, LecturerRooms lecturerRooms)
+    public HeadOfDepartment(int staffID, String staffWorkInformation, int staffWorkHour ,String lecturerName, String lecturerSurname, int lecturerRooms)
     {
         super(staffID, staffWorkInformation, staffWorkHour, lecturerName, lecturerSurname, lecturerRooms);
     }

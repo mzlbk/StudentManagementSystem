@@ -73,7 +73,7 @@ public abstract class Students {
         this.takenCourses = takenCourses;
     }
 
-    abstract public void addCourses(Courses courses);
+
 
     //ALTI OKU
     public void GPACalculator(Courses courses)
@@ -120,15 +120,6 @@ public abstract class Students {
         }
     }
 
-    //BURAYA DA BAK YAPAMADIM
-
-    public void AddStudent(Secretary ofStudent)
-    {
-        //ofStudent.addStudent(this);
-        secretaryArrayList.add(ofStudent);
-    }
-
-    //BURAYA DA BAK HİÇBİR BOK YAPAMADIM ÖZÜR DİLERİM / NP
     private void ListCourses(HashMap takenCourses)
     {
         this.takenCourses = takenCourses;
