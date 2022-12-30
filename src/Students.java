@@ -8,7 +8,7 @@ public abstract class Students {
 
     private ArrayList<Secretary> secretaryArrayList = new ArrayList<>();
 
-    private HashMap<Courses, String> takenCourses = new HashMap<>();
+    private HashMap<Courses, Integer> takenCourses = new HashMap<>();
 
     public Students()
     {
@@ -65,41 +65,54 @@ public abstract class Students {
         this.secretaryArrayList = secretaryArrayList;
     }
 
-    public HashMap<Courses, String> getTakenCourses() {
+    public HashMap<Courses, Integer> getTakenCourses() {
         return takenCourses;
     }
 
-    public void setTakenCourses(HashMap<Courses, String> takenCourses) {
+    public void setTakenCourses(HashMap<Courses, Integer> takenCourses) {
         this.takenCourses = takenCourses;
     }
 
     abstract public void addCourses(Courses courses);
 
     //ALTI OKU
-    public Double GPACalculator() {
-        if (takenCourses.isEmpty()) {
+    public void GPACalculator(Courses courses)
+    {
+        int i;
+        double gpa = 0.0;
+        if (takenCourses.isEmpty())
+        {
             System.out.println("Student has no courses!");
-            //BURAYA GPA HESAPLAMA KODLARINI YAZ
         }
-        return 0.0;
-        //UNUTMA ÜSTÜ OKU
+        else
+        {
+            Set set = takenCourses.entrySet();
+            Iterator itr1 = set.iterator();
+            while (itr1.hasNext()) {
+                Map.Entry me = (Map.Entry) itr1.next();
+                i = Integer.parseInt("me.getValue()");
+                gpa = gpa + courses.getCourseCredit()*i;
+            }
+            System.out.println(gpa);
+            System.out.println("kerem");
+        }
     }
 
     public int getGrade(Courses courses) {
         int note = 0;
-        Set set = this.takenCourses.entrySet();
+        Set set = takenCourses.entrySet();
         Iterator itr = set.iterator();
         while (itr.hasNext()) {
-            Map.Entry entry = (Map.Entry) itr.next();
-            if (entry.getKey().equals(courses))
+            Map.Entry me = (Map.Entry) itr.next();
+            if (me.getKey().equals(courses))
             {
-                note = (int) entry.getValue();
+                note = (int) me.getValue();
             }
         }
         if(note == 0)
         {
             System.out.println("No notes have been added to this course yet!");
-            return 0; // BURAYA DA BAK NE RETURNLEYECEKSİN BULAMADIM
+            return 0;
         }
         else
         {
@@ -116,22 +129,15 @@ public abstract class Students {
     }
 
     //BURAYA DA BAK HİÇBİR BOK YAPAMADIM ÖZÜR DİLERİM / NP
-    private String ListCourses(HashMap takenCourses)
+    private void ListCourses(HashMap takenCourses)
     {
-        String s = "s";
         this.takenCourses = takenCourses;
-        return s;
+        System.out.println();
     }
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + ID +
-                ", name='" + name + '\'' +
-                ", surname=" + surname + '\'' +
-                ", year=" + year +
-                //", community='" + showCommunities() + '\'' +
-                //", advisor=" + advisor.GetNameSurname() +
-                //", takenCourse=" + showTakenCourse() +
-                '}';
+
+    public void showStudentInfo() {
+        System.out.println("ID: " + ID + " " + "Name: " + name + " " + "Surname: " + surname + " " + "Year: " + year);
     }
+
+
 }
