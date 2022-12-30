@@ -30,7 +30,6 @@ public class Lecturer extends Staff
             Map.Entry mapEntry = (Map.Entry) itr11.next();
             if(mapEntry.getKey().equals(course)){
                 mapEntry.setValue(note);
-                //note =  Integer.parseInt(mapEntry.getValue().toString());
                 count++;
             }
         }

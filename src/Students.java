@@ -73,13 +73,11 @@ public abstract class Students {
         this.takenCourses = takenCourses;
     }
 
-
-
+    double gpa = 0.0;
     //ALTI OKU
-    public void GPACalculator(Courses courses)
+    public double GPACalculator(Courses courses)
     {
         int i;
-        double gpa = 0.0;
         if (takenCourses.isEmpty())
         {
             System.out.println("Student has no courses!");
@@ -88,13 +86,28 @@ public abstract class Students {
         {
             Set set = takenCourses.entrySet();
             Iterator itr1 = set.iterator();
+
             while (itr1.hasNext()) {
                 Map.Entry me = (Map.Entry) itr1.next();
-                i = Integer.parseInt("me.getValue()");
-                gpa = gpa + courses.getCourseCredit()*i;
+                if (courses == me.getKey()) {
+                    double d = (int) me.getValue();
+                    gpa = (gpa + (courses.getCourseCredit() * d));
+                }
+            /*Set set = takenCourses.entrySet();
+            Iterator itr1 = set.iterator();
+
+            while (itr1.hasNext())
+            {
+                Map.Entry me = (Map.Entry) itr1.next();
+                double d = (int) me.getValue();
+                gpa = (gpa + (course.getCourseCredit()*d));
             }
-            System.out.println(gpa);
-            System.out.println("kerem");
+            gpa = gpa/takenCourses.size();
+            System.out.println(gpa);*/
+            }
+            //gpa = gpa / takenCourses.size();
+            //System.out.println(gpa);
+            return gpa;
         }
     }
 

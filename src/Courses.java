@@ -36,12 +36,12 @@ public class Courses
         this.courseCredit = courseCredit;
     }
 
-    public  Courses()
+    /*public  Courses()
     {
         this.courseName = "NULL";
         this.courseCode = 0;
         this.courseCredit = 0;
-    }
+    }*/
     public Courses(String courseName, int courseCode, int courseCredit)
     {
         this.courseName = courseName;

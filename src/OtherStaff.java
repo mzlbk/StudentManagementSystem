@@ -4,10 +4,4 @@ public class OtherStaff extends Staff
     {
         super(staffID, staffWorkInformation, staffWorkHour);
     }
-
-
-    public void Kanka()
-    {
-        System.out.println("POLİMORFİZM KANKA POLİMORFİZM");
-    }
 }
