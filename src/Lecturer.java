@@ -8,16 +8,16 @@ public class Lecturer extends Staff
     private String lecturerName;
     private String lecturerSurname;
 
-    private int lecturerRooms;
+    private LecturerRooms lecturerRooms;
 
     private ArrayList<Courses> courseList = new ArrayList<Courses>();
 
-    public Lecturer(int staffID, String staffWorkInformation, int staffWorkHour ,String lecturerName, String lecturerSurname, int lecturerRooms)
+    public Lecturer(int staffID, String staffWorkInformation, int staffWorkHour ,String lecturerName, String lecturerSurname, LecturerRooms lecturerRooms)
     {
         super(staffID, staffWorkInformation, staffWorkHour);
         this.lecturerName = lecturerName;
         this.lecturerSurname = lecturerSurname;
-        this.lecturerRooms= lecturerRooms;
+        this.lecturerRooms = lecturerRooms;
     }
 
     public void assignGrade(Courses course, Students student, int note)
@@ -38,7 +38,6 @@ public class Lecturer extends Staff
             System.out.println("Note not entered yet!");
         }
         else{}
-        System.out.println("POLİMORFİZM KANKA POLİMORFİZM");
         System.out.println(note);
     }
 

@@ -4,9 +4,23 @@ public class Secretary extends Staff
     {
         super(staffID,staffWorkInformation,staffWorkHour);
     }
-    private void addCourse(Lecturer lecturer){
+
+    public void addCourse(Lecturer lecturer, Courses courses){
         if(lecturer.getCourseList().size()>=10){
             System.out.println("This lecturer can not get more course");
         }
+        else
+        {
+            courses.setLecturer(lecturer);
+            lecturer.getCourseList().add(courses);
+            System.out.println(courses.getLecturer() + " " + lecturer.getCourseList());
+        }
+    }
+
+    public void changeLecturer(Lecturer lecturer, Courses courses)
+    {
+        courses.setLecturer(lecturer);
+        lecturer.getCourseList().add(courses);
+        System.out.println(courses.getLecturer() + " " + lecturer.getCourseList());
     }
 }

@@ -7,11 +7,6 @@ public class UndergraduateStudents extends Students
         this.degree=degree;
     }
 
-    public void addCourses(Courses courses)
-    {
-
-    }
-
     @Override
     public void addCourse(Courses courses)
     {

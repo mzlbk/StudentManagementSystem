@@ -2,23 +2,54 @@ public class Main
 {
     public static void main(String[] args)
     {
-        System.out.println("Hello world!");
         System.out.println("Kerem HEHE");
+        LecturerRooms lecturerRoom1 = new LecturerRooms(42);
+        LecturerRooms lecturerRoom2 = new LecturerRooms(54);
 
-        Courses courses = new Courses("a",1,2);
-        UndergraduateStudents undergraduateStudents = new UndergraduateStudents(1, "a", "a", 1,"a");
-        UndergraduateStudents undergraduateStudents1 = new UndergraduateStudents(1, "b", "b", 2, "b");
 
-        undergraduateStudents.showStudentInfo();
+        UndergraduateStudents undergraduateStudents1 = new UndergraduateStudents(1, "hayrullah", "gamşullah", 2020,"undergraduate");
+        UndergraduateStudents undergraduateStudents2 = new UndergraduateStudents(2, "hayriye", "yılmaz", 2022, "doctora");
+
+
+        Courses courses1 = new Courses("MATHEMATIC",101,4);
+        Courses courses2 = new Courses("PHYSICS", 102, 4);
+
+
         undergraduateStudents1.showStudentInfo();
-        undergraduateStudents.GPACalculator(courses);
+        undergraduateStudents2.showStudentInfo();
+        //undergraduateStudents1.GPACalculator(courses1);
 
-        Lecturer lecturer = new Lecturer(1,"s",1,"s","s",1);
-        lecturer.assignGrade(courses,undergraduateStudents,100);
-        Staff sekreter = new Secretary(1,"sekreter",8);
-        //sekreter.addCourse(undergraduateStudents);
-        //undergraduateStudents.addCourses;
+
+        Lecturer lecturer1 = new Lecturer(10,"Lecturer",4,"Aybike","Şimşek",lecturerRoom1);
+        Lecturer lecturer2  = new Lecturer(20,"Lecturer",4,"Bedirhan","Aydın",lecturerRoom2);
+
+
+        Secretary sekreter = new Secretary(1,"sekreter",8);
+        sekreter.addCourse(lecturer1, courses1);
+        sekreter.addCourse(lecturer2, courses2);
+        //sekreter.changeLecturer(lecturer2, courses1);
+
+        undergraduateStudents1.addCourse(courses1);
+        undergraduateStudents1.addCourse(courses2);
+        undergraduateStudents2.addCourse(courses1);
+        undergraduateStudents2.addCourse(courses2);
+
+        lecturer1.assignGrade(courses1,undergraduateStudents1,100);
+        lecturer1.assignGrade(courses2,undergraduateStudents1,100);
+        lecturer2.assignGrade(courses1,undergraduateStudents2,35);
+        lecturer2.assignGrade(courses2,undergraduateStudents2,35);
+
+
+        //undergraduateStudents.addCourse();
         //System.out.println(sekreter.getStaffID());
+
+
+        System.out.println("sa");
+        System.out.println(undergraduateStudents1.getName() + " " + courses1.getCourseName()+ " " + undergraduateStudents1.getTakenCourses().get(courses1));
+        System.out.println(undergraduateStudents1.getName() + " " + courses2.getCourseName()+ " " + undergraduateStudents1.getTakenCourses().get(courses2));
+        System.out.println(undergraduateStudents2.getName() + " " + courses1.getCourseName()+ " " + undergraduateStudents2.getTakenCourses().get(courses1));
+        System.out.println(undergraduateStudents2.getName() + " " + courses2.getCourseName()+ " " + undergraduateStudents2.getTakenCourses().get(courses2));
+
     }
 }
 

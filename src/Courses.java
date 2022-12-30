@@ -7,6 +7,16 @@ public class Courses
     private int courseCode;
     private int courseCredit;
 
+    private Lecturer lecturer;
+
+    public Lecturer getLecturer() {
+        return lecturer;
+    }
+
+    public void setLecturer(Lecturer lecturer) {
+        this.lecturer = lecturer;
+    }
+
     public String getCourseName() {
         return courseName;
     }
