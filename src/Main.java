@@ -45,10 +45,10 @@ public class Main
 
 
         System.out.println("sa");
-        System.out.println(undergraduateStudents1.getName() + " " + courses1.getCourseName()+ " " + undergraduateStudents1.getTakenCourses().get(courses1));
-        System.out.println(undergraduateStudents1.getName() + " " + courses2.getCourseName()+ " " + undergraduateStudents1.getTakenCourses().get(courses2));
-        System.out.println(undergraduateStudents2.getName() + " " + courses1.getCourseName()+ " " + undergraduateStudents2.getTakenCourses().get(courses1));
-        System.out.println(undergraduateStudents2.getName() + " " + courses2.getCourseName()+ " " + undergraduateStudents2.getTakenCourses().get(courses2));
+        System.out.println(undergraduateStudents1.getName() + " " + courses1.getCourseName() + " " + undergraduateStudents1.getTakenCourses().get(courses1));
+        System.out.println(undergraduateStudents1.getName() + " " + courses2.getCourseName() + " " + undergraduateStudents1.getTakenCourses().get(courses2));
+        System.out.println(undergraduateStudents2.getName() + " " + courses1.getCourseName() + " " + undergraduateStudents2.getTakenCourses().get(courses1));
+        System.out.println(undergraduateStudents2.getName() + " " + courses2.getCourseName() + " " + undergraduateStudents2.getTakenCourses().get(courses2));
 
     }
 }
