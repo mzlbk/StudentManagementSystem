@@ -130,5 +130,6 @@ public abstract class Students {
         System.out.println("ID: " + ID + " " + "Name: " + name + " " + "Surname: " + surname + " " + "Year: " + year);
     }
 
+    abstract public void addCourse(Courses courses);
 
 }

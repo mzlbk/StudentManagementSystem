@@ -6,4 +6,10 @@ public class LicenceStudents extends Students
         this.gradeAvarage=gradeAvarage;
     }
 
+    @Override
+    public void addCourse(Courses courses)
+    {
+        super.getTakenCourses().put(courses, null);
+        courses.getStudentId().add(super.getID());
+    }
 }

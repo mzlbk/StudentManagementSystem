@@ -11,4 +11,11 @@ public class UndergraduateStudents extends Students
     {
 
     }
+
+    @Override
+    public void addCourse(Courses courses)
+    {
+        super.getTakenCourses().put(courses, null);
+        courses.getStudentId().add(super.getID());
+    }
 }

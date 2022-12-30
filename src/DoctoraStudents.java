@@ -9,4 +9,10 @@ public class DoctoraStudents extends Students
     public void addCourses(Courses courses) {
 
     }
+
+    @Override
+    public void addCourse(Courses courses) {
+        super.getTakenCourses().put(courses, null);
+        courses.getStudentId().add(super.getID());
+    }
 }

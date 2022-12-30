@@ -39,10 +39,26 @@ public class Courses
         this.courseCredit = courseCredit;
     }
 
-    //********************
-    //private ArrayList<Integer> studentId = new ArrayList();
+    public ArrayList<Integer> getStudentId() {
+        return studentId;
+    }
 
-    //private HashMap<Integer,String> courseGrades = new HashMap<>();
+    public void setStudentId(ArrayList<Integer> studentId) {
+        this.studentId = studentId;
+    }
+
+    public HashMap<Integer, String> getCourseGrades() {
+        return courseGrades;
+    }
+
+    public void setCourseGrades(HashMap<Integer, String> courseGrades) {
+        this.courseGrades = courseGrades;
+    }
+
+    //********************
+    private ArrayList<Integer> studentId = new ArrayList();
+
+    private HashMap<Integer,String> courseGrades = new HashMap<>();
     //Kullanışına bak, main class'ında var
 
     //public void fillCourseGrades(Student student){ //it uses lecturer extra 1
