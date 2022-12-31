@@ -12,7 +12,7 @@ public class Main
 
         Courses courses1 = new Courses("MATHEMATIC", 101, 4);
         Courses courses2 = new Courses("PHYSICS", 102, 4);
-
+        Courses courses3 = new Courses("PROGRAMMING",103,2);
 
         undergraduateStudents1.showStudentInfo();
         undergraduateStudents2.showStudentInfo();
@@ -25,6 +25,7 @@ public class Main
         Secretary sekreter = new Secretary(1, "sekreter", 8);
         sekreter.addCourse(lecturer1, courses1);
         sekreter.addCourse(lecturer2, courses2);
+        sekreter.addCourse(lecturer1, courses3);
         //sekreter.changeLecturer(lecturer2, courses1);
 
 
@@ -32,6 +33,7 @@ public class Main
         undergraduateStudents1.addCourse(courses2);
         undergraduateStudents2.addCourse(courses1);
         undergraduateStudents2.addCourse(courses2);
+        undergraduateStudents2.addCourse(courses3);
 
 
         lecturer1.assignGrade(courses1, undergraduateStudents1, 100);
@@ -41,11 +43,14 @@ public class Main
 
         System.out.println("burası");
         undergraduateStudents1.GPACalculator(undergraduateStudents1.getCreditCourses());
+        undergraduateStudents2.GPACalculator(undergraduateStudents2.getCreditCourses());
 
         System.out.println("burası da");
         undergraduateStudents1.ListCourses();
+        undergraduateStudents2.ListCourses();
 
 
+        undergraduateStudents1.getGrade(courses2);
         //undergraduateStudents.addCourse();
         //System.out.println(sekreter.getStaffID());
 

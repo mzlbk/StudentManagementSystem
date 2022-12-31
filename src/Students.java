@@ -7,7 +7,6 @@ public abstract class Students {
     private int year;
 
     private ArrayList<Secretary> secretaryArrayList = new ArrayList<>();
-
     private HashMap<Courses, Integer> takenCourses = new HashMap<>();
     private HashMap<Courses, Integer> creditCourses = new HashMap<>();
 
@@ -104,20 +103,31 @@ public abstract class Students {
             {
                 Map.Entry me = (Map.Entry) itr1.next();
                 Map.Entry me2 = (Map.Entry) itr2.next();
-                if (me2.getKey() == me.getKey())
+                if (me2.getKey() == me.getKey() && me.getValue() != null)
                 {
                     double d = (int) me.getValue();
                     double dd = (int) me2.getValue();
                     gpa = (gpa + (dd * d));
                 }
             }
-            gpa = gpa / takenCourses.size();
+            int count = 0;
+            Iterator itr3 = set.iterator();
+            while (itr3.hasNext())
+            {
+                Map.Entry me3 = (Map.Entry) itr3.next();
+                if (me3.getValue() != null)
+                {
+                    count++;
+                }
+            }
+
+            gpa = gpa / count;
             System.out.println(gpa);
         }
 
     }
 
-    public int getGrade(Courses courses) {
+    public void getGrade(Courses courses) {
         int note = 0;
         Set set = takenCourses.entrySet();
         Iterator itr = set.iterator();
@@ -126,23 +136,30 @@ public abstract class Students {
             if (me.getKey().equals(courses))
             {
                 note = (int) me.getValue();
+                break;
             }
         }
         if(note == 0)
         {
             System.out.println("No notes have been added to this course yet!");
-            return 0;
         }
         else
         {
-            return note;
+            System.out.println(courses.getCourseName() + " " + note);
         }
     }
 
     public void ListCourses()
     {
         for (Map.Entry<Courses, Integer> courseEntry: takenCourses.entrySet()){
-            System.out.println(courseEntry.getKey().getCourseName()+ " "+ courseEntry.getValue());
+            if(courseEntry.getValue() == null)
+            {
+                System.out.println(courseEntry.getKey().getCourseName() + " -");
+            }
+            else
+            {
+                System.out.println(courseEntry.getKey().getCourseName()+ " "+ courseEntry.getValue());
+            }
         }
     }
 
