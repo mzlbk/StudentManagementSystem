@@ -13,7 +13,7 @@ public class Secretary extends Staff
         {
             courses.setLecturer(lecturer);
             lecturer.getCourseList().add(courses);
-            System.out.println(courses.getLecturer() + " " + lecturer.getCourseList());
+            //System.out.println(courses.getLecturer().getLecturerName() + " " + lecturer.getCourseList().get(0));
         }
     }
 
@@ -21,6 +21,6 @@ public class Secretary extends Staff
     {
         courses.setLecturer(lecturer);
         lecturer.getCourseList().add(courses);
-        System.out.println(courses.getLecturer() + " " + lecturer.getCourseList());
+        //System.out.println(courses.getLecturer().getLecturerName() + " " + lecturer.getCourseList());
     }
 }
