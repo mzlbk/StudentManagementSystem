@@ -5,65 +5,52 @@ public class HeadOfDepartment extends Lecturer
         super(staffID, staffWorkInformation, staffWorkHour, lecturerName, lecturerSurname, lecturerRooms);
     }
 
-
     //BURASI MEZUNİYET BELGESİ VERME ŞEYSİ
 
 
-    private int courseNum=0;
+    private int courseNum1=0;
+    private int courseNum2=0;
+    private int courseNum3=0;
     public void giveCertificate(UndergraduateStudents student)
     {
-
         int courseNum = student.getTakenCourses().size();
 
-        if(courseNum>=3 && student.getGpa()>=0.5)
+        if(courseNum>=40 && student.getGpa()>=2.0)
         {
-
-            System.out.println("Congratulations you take a certificate " + student.getName() + " " + student.getSurname());
-            courseNum=0;
+            System.out.println(student.getName() + " " + student.getSurname()+ " " + "graduated halal");
+            courseNum1=0;
         }
         else{
-            //System.out.println(student.GPACalculator(student.getCreditCourses()));
-            System.out.println("This student does not meet the conditions to get certificate");
-            courseNum=0;
+            System.out.println(student.getName() + " " + student.getSurname()+ " " + "can not graduated halal");
+            courseNum1=0;
         }
     }
+    public void giveCertificate(LicenceStudents student)
+    {
+        int courseNum = student.getTakenCourses().size();
 
-    /*public void giveCertificate(GraduateStudent student){ //Method overloading
-        if(student.getDegree()=="MASTER"){
-            student.getTakenCourse().forEach((lesson,grade) -> {
-                if(lesson != null && grade != null && student.controlSuccessfully(lesson)==true){
-                    courseNum++;
-                }
-            });
-
-            if(courseNum>=7 && student.CalculateGPA()>=2.5){
-                System.out.println("Congratulations you take a certificate");
-                System.out.println(student.toString());
-                courseNum=0;
-            }
-            else{
-                System.out.println("This student does not meet the conditions to get certificate");
-                courseNum=0;
-            }
+        if(courseNum>=7 && student.getGpa()>=2.5)
+        {
+            System.out.println(student.getName() + " " + student.getSurname()+ " " + "graduated halal");
+            courseNum2=0;
         }
-        else if(student.getDegree()=="DOCTORAL"){
-            student.getTakenCourse().forEach((lesson,grade) -> {
-                if(lesson != null && grade != null && student.controlSuccessfully(lesson)==true){
-                    courseNum++;
-                }
-            });
-
-            if(courseNum>=8 && student.CalculateGPA()>=3.0){
-                System.out.println("Congratulations you take a certificate");
-                System.out.println(student.toString());
-                courseNum=0;
-            }
-            else{
-                System.out.println("This student does not meet the conditions to get certificate");
-                courseNum=0;
-            }
+        else{
+            System.out.println(student.getName() + " " + student.getSurname()+ " " + "can not graduated");
+            courseNum2=0;
         }
-    }*/
+    }
+    public void giveCertificate(DoctoraStudents student)
+    {
+        int courseNum = student.getTakenCourses().size();
 
-
+        if(courseNum>=8 && student.getGpa()>=3.0)
+        {
+            System.out.println(student.getName() + " " + student.getSurname()+ " " + "graduated halal");
+            courseNum3=0;
+        }
+        else{
+            System.out.println(student.getName() + " " + student.getSurname()+ " " + "can not graduated");
+            courseNum3=0;
+        }
+    }
 }

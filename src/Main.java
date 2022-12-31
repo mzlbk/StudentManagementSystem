@@ -1,13 +1,13 @@
 public class Main
 {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         System.out.println("Kerem HEHE");
 
         //Creating Lecturer Offices
         LecturerRooms lecturerRoom1 = new LecturerRooms(42);
         LecturerRooms lecturerRoom2 = new LecturerRooms(54);
 
-        HeadOfDepartment headOfDepartment = new HeadOfDepartment(3,"BAŞHOCA",8, "HOCA","HOCA",lecturerRoom1);
 
         //Creating Students
         UndergraduateStudents undergraduateStudents1 = new UndergraduateStudents(1, "Hayrullah", "Gamşullah", 2020, "undergraduate");
@@ -25,8 +25,9 @@ public class Main
         undergraduateStudents2.showStudentInfo();
 
         //Creating lecturers
-        Lecturer lecturer1 = new Lecturer(10, "Lecturer", 4, "Aybike", "Şimşek", lecturerRoom1);
+        Lecturer lecturer1 = new HeadOfDepartment(10, "Lecturer", 4, "Aybike", "Şimşek", lecturerRoom1);
         Lecturer lecturer2 = new Lecturer(20, "Lecturer", 4, "Bedirhan", "Aydın", lecturerRoom2);
+
 
         //Creating Secretary
         Secretary sekreter = new Secretary(1, "secretary", 8);
@@ -78,7 +79,8 @@ public class Main
         //undergraduateStudents.addCourse();
         //System.out.println(sekreter.getStaffID());
 
-        headOfDepartment.giveCertificate(undergraduateStudents1);
+        ((HeadOfDepartment) lecturer1).giveCertificate(undergraduateStudents1);
+
 
         System.out.println();
         System.out.println("Students and their notes");
