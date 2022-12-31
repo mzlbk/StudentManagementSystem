@@ -10,8 +10,7 @@ public abstract class Students {
 
     private HashMap<Courses, Integer> takenCourses = new HashMap<>();
 
-    public Students()
-    {
+    public Students() {
         this.ID = 0;
         this.name = "NULL";
         this.surname = "NULL";
@@ -74,8 +73,9 @@ public abstract class Students {
     }
 
     double gpa = 0.0;
+
     //ALTI OKU
-    public double GPACalculator(Courses courses)
+    public void GPACalculator(Courses courses)
     {
         int i;
         if (takenCourses.isEmpty())
@@ -87,9 +87,11 @@ public abstract class Students {
             Set set = takenCourses.entrySet();
             Iterator itr1 = set.iterator();
 
-            while (itr1.hasNext()) {
+            while (itr1.hasNext())
+            {
                 Map.Entry me = (Map.Entry) itr1.next();
-                if (courses == me.getKey()) {
+                if (courses == me.getKey())
+                {
                     double d = (int) me.getValue();
                     gpa = (gpa + (courses.getCourseCredit() * d));
                 }
@@ -107,8 +109,8 @@ public abstract class Students {
             }
             //gpa = gpa / takenCourses.size();
             //System.out.println(gpa);
-            return gpa;
         }
+
     }
 
     public int getGrade(Courses courses) {
