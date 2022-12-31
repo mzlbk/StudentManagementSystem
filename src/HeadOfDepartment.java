@@ -10,9 +10,9 @@ public class HeadOfDepartment extends Lecturer
 
 
     private int courseNum=0;
-    public void giveCertificate(Students student)
+    public void giveCertificate(UndergraduateStudents student)
     {
-        if(student.)
+
         int courseNum = student.getTakenCourses().size();
 
         if(courseNum>=3 && student.getGpa()>=0.5)

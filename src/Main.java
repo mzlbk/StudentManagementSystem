@@ -10,8 +10,8 @@ public class Main
         HeadOfDepartment headOfDepartment = new HeadOfDepartment(3,"BAŞHOCA",8, "HOCA","HOCA",lecturerRoom1);
 
         //Creating Students
-        Students undergraduateStudents1 = new UndergraduateStudents(1, "Hayrullah", "Gamşullah", 2020, "undergraduate");
-        Students undergraduateStudents2 = new UndergraduateStudents(2, "Hayriye", "Yılmaz", 2022, "doctora");
+        UndergraduateStudents undergraduateStudents1 = new UndergraduateStudents(1, "Hayrullah", "Gamşullah", 2020, "undergraduate");
+        UndergraduateStudents undergraduateStudents2 = new UndergraduateStudents(2, "Hayriye", "Yılmaz", 2022, "doctora");
 
         //Creating courses
         UndergraduateCourses courses1 = new UndergraduateCourses("MATHEMATIC", 101, 4);

@@ -5,9 +5,13 @@ public class DoctoraStudents extends Students
         super(id, name, surname, year);
         this.degree=degree;
     }
-    //@Override
-    public void addCourses(Courses courses) {
 
+    public String getDegree() {
+        return degree;
+    }
+
+    public void setDegree(String degree) {
+        this.degree = degree;
     }
 
     @Override
