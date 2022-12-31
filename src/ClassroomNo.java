@@ -9,8 +9,6 @@ public class ClassroomNo extends Areas
     {
         this.classroomCode = classroomName;
     }
-
-
     public ClassroomNo()
     {
         this.classroomCode = 0;

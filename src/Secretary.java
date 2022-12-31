@@ -6,21 +6,19 @@ public class Secretary extends Staff
     }
 
     public void addCourse(Lecturer lecturer, Courses courses){
-        if(lecturer.getCourseList().size()>=10){
-            System.out.println("This lecturer can not get more course");
+        if(lecturer.getCourseList().size()>=10)
+        {
+            System.out.println("Teacher Can Give Max 10 Courses");
         }
         else
         {
             courses.setLecturer(lecturer);
             lecturer.getCourseList().add(courses);
-            //System.out.println(courses.getLecturer().getLecturerName() + " " + lecturer.getCourseList().get(0));
         }
     }
-
-    public void changeLecturer(Lecturer lecturer, Courses courses)
+    public void lecturerChanger(Lecturer lecturer, Courses courses)
     {
         courses.setLecturer(lecturer);
         lecturer.getCourseList().add(courses);
-        //System.out.println(courses.getLecturer().getLecturerName() + " " + lecturer.getCourseList());
     }
 }

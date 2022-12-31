@@ -5,13 +5,12 @@ public abstract class Students {
     private String name;
     private String surname;
     private int year;
-
-
     private ArrayList<Secretary> secretaryArrayList = new ArrayList<>();
     private HashMap<Courses, Integer> takenCourses = new HashMap<>();
     private HashMap<Courses, Integer> creditCourses = new HashMap<>();
 
-    public HashMap<Courses, Integer> getCreditCourses() {
+    public HashMap<Courses, Integer> getCreditCourses()
+    {
         return creditCourses;
     }
 
@@ -150,12 +149,12 @@ public abstract class Students {
             {
                 Map.Entry me = (Map.Entry) itr1.next();
                 Map.Entry me2 = (Map.Entry) itr2.next();
-                if(me.getValue()!=null)
+                if (me.getValue() != null)
                 {
                     double d = (int) me.getValue();
                     double dd = (int) me2.getValue();
 
-                    if(me2.getKey() == me.getKey() && me.getValue() != null)
+                    if (me2.getKey() == me.getKey() && me.getValue() != null)
                     {
                         if (d <= 100 && d >= 90)
                         {
@@ -196,41 +195,20 @@ public abstract class Students {
                         credit = credit + dd;
                     }
                 }
-
             }
-                /*if (me2.getKey() == me.getKey() && me.getValue() != null)
-                {
-
-                    gpa = (gpa + (dd * d));
-                }
-            }
-            int count = 0;
-            Iterator itr3 = set.iterator();
-            while (itr3.hasNext())
-            {
-                Map.Entry me3 = (Map.Entry) itr3.next();
-                if (me3.getValue() != null)
-                {
-                    count++;
-                }
-            }
-
-            gpa = gpa / count;
-            System.out.println(gpa);*/
         }
         gpa = gpa / credit;
         System.out.println("GPA: "+ gpa);
         credit = 0;
-        System.out.println("keremin");
         return gpa;
-
     }
-
-    public void getGrade(Courses courses) {
+    public void getGrade(Courses courses)
+    {
         int note = 0;
         Set set = takenCourses.entrySet();
         Iterator itr = set.iterator();
-        while (itr.hasNext()) {
+        while (itr.hasNext())
+        {
             Map.Entry me = (Map.Entry) itr.next();
             if (me.getKey().equals(courses))
             {
@@ -240,7 +218,7 @@ public abstract class Students {
         }
         if(note == 0)
         {
-            System.out.println("No notes have been added to this course yet!");
+            System.out.println("No Notes Have Been Added to This Course Yet!");
         }
         else
         {
@@ -250,7 +228,8 @@ public abstract class Students {
 
     public void ListCourses()
     {
-        for (Map.Entry<Courses, Integer> courseEntry: takenCourses.entrySet()){
+        for (Map.Entry<Courses, Integer> courseEntry: takenCourses.entrySet())
+        {
             if(courseEntry.getValue() == null)
             {
                 System.out.println(courseEntry.getKey().getCourseName() + " -");
@@ -262,7 +241,8 @@ public abstract class Students {
         }
     }
 
-    public void showStudentInfo() {
+    public void showStudentInfo()
+    {
         System.out.println("ID: " + ID + " " + "Name: " + name + " " + "Surname: " + surname + " " + "Year: " + year);
     }
 

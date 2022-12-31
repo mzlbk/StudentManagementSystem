@@ -2,26 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92277a94-8d04-428b-8bbc-9c25b13bafd1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Areas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClassroomNo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Courses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DoctoraCourses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DoctoraStudents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HeadOfDepartment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lecturer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LecturerRooms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LicenceCourses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LicenceStudents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OtherStaff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Secretary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Staff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Students.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UndergraduateCourses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UndergraduateStudents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClassroomNo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClassroomNo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Courses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Courses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DoctoraStudents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DoctoraStudents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HeadOfDepartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HeadOfDepartment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lecturer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lecturer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LicenceStudents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LicenceStudents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Secretary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Secretary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Staff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Students.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Students.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UndergraduateStudents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UndergraduateStudents.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,18 +39,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/BeA/Desktop/StudentManagementSystem",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/BeA/Desktop/StudentManagementSystem&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

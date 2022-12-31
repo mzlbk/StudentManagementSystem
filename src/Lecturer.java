@@ -7,11 +7,8 @@ public class Lecturer extends Staff
 {
     private String lecturerName;
     private String lecturerSurname;
-
     private LecturerRooms lecturerRooms;
-
     private ArrayList<Courses> courseList = new ArrayList<Courses>();
-
     public Lecturer(int staffID, String staffWorkInformation, int staffWorkHour ,String lecturerName, String lecturerSurname, LecturerRooms lecturerRooms)
     {
         super(staffID, staffWorkInformation, staffWorkHour);
@@ -26,40 +23,46 @@ public class Lecturer extends Staff
         Set set = student.getTakenCourses().entrySet();
         Iterator itr11 = set.iterator();
 
-        while (itr11.hasNext()){
+        while (itr11.hasNext())
+        {
             Map.Entry mapEntry = (Map.Entry) itr11.next();
-            if(mapEntry.getKey().equals(course)){
+            if(mapEntry.getKey().equals(course))
+            {
                 mapEntry.setValue(note);
                 count++;
             }
         }
-        if(count==0){
-            System.out.println("Note not entered yet!");
+        if(count==0)
+        {
+            System.out.println("Note Not Entered Yet!");
         }
-        else{}
-        System.out.println(note);
+        else
+        {
+            System.out.println(note);
+        }
     }
-
-    public String getLecturerName() {
+    public String getLecturerName()
+    {
         return lecturerName;
     }
-    public void setLecturerName(String lecturerName) {
+    public void setLecturerName(String lecturerName)
+    {
         this.lecturerName = lecturerName;
     }
-
-    public String getLecturerSurname() {
+    public String getLecturerSurname()
+    {
         return lecturerSurname;
     }
-
-    public void setLecturerSurname(String lecturerSurname) {
+    public void setLecturerSurname(String lecturerSurname)
+    {
         this.lecturerSurname = lecturerSurname;
     }
-
-    public ArrayList<Courses> getCourseList() {
+    public ArrayList<Courses> getCourseList()
+    {
         return courseList;
     }
-
-    public void setCourseList(ArrayList<Courses> courseList) {
+    public void setCourseList(ArrayList<Courses> courseList)
+    {
         this.courseList = courseList;
     }
 }
