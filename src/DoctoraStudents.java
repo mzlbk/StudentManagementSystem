@@ -13,6 +13,7 @@ public class DoctoraStudents extends Students
     @Override
     public void addCourse(Courses courses) {
         super.getTakenCourses().put(courses, null);
+        super.getCreditCourses().put(courses, courses.getCourseCredit());
         courses.getStudentId().add(super.getID());
     }
 }

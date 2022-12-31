@@ -9,8 +9,6 @@ public class Courses
 
     private Lecturer lecturer;
 
-    private
-
     public Lecturer getLecturer() {
         return lecturer;
     }

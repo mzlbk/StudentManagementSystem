@@ -9,6 +9,15 @@ public abstract class Students {
     private ArrayList<Secretary> secretaryArrayList = new ArrayList<>();
 
     private HashMap<Courses, Integer> takenCourses = new HashMap<>();
+    private HashMap<Courses, Integer> creditCourses = new HashMap<>();
+
+    public HashMap<Courses, Integer> getCreditCourses() {
+        return creditCourses;
+    }
+
+    public void setCreditCourses(HashMap<Courses, Integer> creditCourses) {
+        this.creditCourses = creditCourses;
+    }
 
     public Students() {
         this.ID = 0;
@@ -72,10 +81,11 @@ public abstract class Students {
         this.takenCourses = takenCourses;
     }
 
+
     double gpa = 0.0;
 
     //ALTI OKU
-    public void GPACalculator(Courses courses)
+    public void GPACalculator(HashMap courses)
     {
         int i;
         if (takenCourses.isEmpty())
@@ -87,28 +97,22 @@ public abstract class Students {
             Set set = takenCourses.entrySet();
             Iterator itr1 = set.iterator();
 
-            while (itr1.hasNext())
-            {
-                Map.Entry me = (Map.Entry) itr1.next();
-                if (courses == me.getKey())
-                {
-                    double d = (int) me.getValue();
-                    gpa = (gpa + (courses.getCourseCredit() * d));
-                }
-            /*Set set = takenCourses.entrySet();
-            Iterator itr1 = set.iterator();
+            Set set1 = courses.entrySet();
+            Iterator itr2 = set1.iterator();
 
             while (itr1.hasNext())
             {
                 Map.Entry me = (Map.Entry) itr1.next();
-                double d = (int) me.getValue();
-                gpa = (gpa + (course.getCourseCredit()*d));
+                Map.Entry me2 = (Map.Entry) itr2.next();
+                if (me2.getKey() == me.getKey())
+                {
+                    double d = (int) me.getValue();
+                    double dd = (int) me2.getValue();
+                    gpa = (gpa + (dd * d));
+                }
             }
-            gpa = gpa/takenCourses.size();
-            System.out.println(gpa);*/
-            }
-            //gpa = gpa / takenCourses.size();
-            //System.out.println(gpa);
+            gpa = gpa / takenCourses.size();
+            System.out.println(gpa);
         }
 
     }
@@ -135,10 +139,11 @@ public abstract class Students {
         }
     }
 
-    private void ListCourses(HashMap takenCourses)
+    public void ListCourses()
     {
-        this.takenCourses = takenCourses;
-        System.out.println();
+        for (Map.Entry<Courses, Integer> courseEntry: takenCourses.entrySet()){
+            System.out.println(courseEntry.getKey().getCourseName()+ " "+ courseEntry.getValue());
+        }
     }
 
     public void showStudentInfo() {

@@ -6,7 +6,7 @@ public class Main
         LecturerRooms lecturerRoom2 = new LecturerRooms(54);
 
 
-        UndergraduateStudents undergraduateStudents1 = new UndergraduateStudents(1, "hayrullah", "gamşullah", 2020, "undergraduate");
+        Students undergraduateStudents1 = new UndergraduateStudents(1, "hayrullah", "gamşullah", 2020, "undergraduate");
         UndergraduateStudents undergraduateStudents2 = new UndergraduateStudents(2, "hayriye", "yılmaz", 2022, "doctora");
 
 
@@ -39,8 +39,11 @@ public class Main
         lecturer2.assignGrade(courses1, undergraduateStudents2, 35);
         lecturer2.assignGrade(courses2, undergraduateStudents2, 35);
 
-        undergraduateStudents1.GPACalculator(courses1);
-        undergraduateStudents1.GPACalculator(courses2);
+        System.out.println("burası");
+        undergraduateStudents1.GPACalculator(undergraduateStudents1.getCreditCourses());
+
+        System.out.println("burası da");
+        undergraduateStudents1.ListCourses();
 
 
         //undergraduateStudents.addCourse();

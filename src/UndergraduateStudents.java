@@ -11,6 +11,7 @@ public class UndergraduateStudents extends Students
     public void addCourse(Courses courses)
     {
         super.getTakenCourses().put(courses, null);
+        super.getCreditCourses().put(courses, courses.getCourseCredit());
         courses.getStudentId().add(super.getID());
     }
 }
