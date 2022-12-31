@@ -6,6 +6,7 @@ public abstract class Students {
     private String surname;
     private int year;
 
+
     private ArrayList<Secretary> secretaryArrayList = new ArrayList<>();
     private HashMap<Courses, Integer> takenCourses = new HashMap<>();
     private HashMap<Courses, Integer> creditCourses = new HashMap<>();
@@ -14,77 +15,123 @@ public abstract class Students {
         return creditCourses;
     }
 
-    public void setCreditCourses(HashMap<Courses, Integer> creditCourses) {
+    public void setCreditCourses(HashMap<Courses, Integer> creditCourses)
+    {
         this.creditCourses = creditCourses;
     }
 
-    public Students() {
+    public Students()
+    {
         this.ID = 0;
         this.name = "NULL";
         this.surname = "NULL";
         this.year = 0;
     }
 
-    public Students(int id, String name, String surname, int year) {
+    public Students(int id, String name, String surname, int year)
+    {
         this.ID = id;
         this.name = name;
         this.surname = surname;
         this.year = year;
     }
 
-    public int getID() {
+    public int getID()
+    {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(int ID)
+    {
         this.ID = ID;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
-    public String getSurname() {
+    public String getSurname()
+    {
         return surname;
     }
 
-    public void setSurname(String surname) {
+    public void setSurname(String surname)
+    {
         this.surname = surname;
     }
 
-    public int getYear() {
+    public int getYear()
+    {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(int year)
+    {
         this.year = year;
     }
 
-    public ArrayList<Secretary> getSecretaryArrayList() {
+    public ArrayList<Secretary> getSecretaryArrayList()
+    {
         return secretaryArrayList;
     }
 
-    public void setSecretaryArrayList(ArrayList<Secretary> secretaryArrayList) {
+    public void setSecretaryArrayList(ArrayList<Secretary> secretaryArrayList)
+    {
         this.secretaryArrayList = secretaryArrayList;
     }
 
-    public HashMap<Courses, Integer> getTakenCourses() {
+    public HashMap<Courses, Integer> getTakenCourses()
+    {
         return takenCourses;
     }
 
-    public void setTakenCourses(HashMap<Courses, Integer> takenCourses) {
+    public void setTakenCourses(HashMap<Courses, Integer> takenCourses)
+    {
         this.takenCourses = takenCourses;
     }
 
 
-    double gpa = 0.0;
+    private double gpa = 0.0;
+    private double credit = 0;
 
-    //ALTI OKU
-    public void GPACalculator(HashMap courses)
+    public double getGpa()
+    {
+        return gpa;
+    }
+
+    public void setGpa(double gpa)
+    {
+        this.gpa = gpa;
+    }
+
+    public double getCredit()
+    {
+        return credit;
+    }
+
+    public void setCredit(double credit)
+    {
+        this.credit = credit;
+    }
+
+    public double getNullCredit()
+    {
+        return nullCredit;
+    }
+
+    public void setNullCredit(double nullCredit)
+    {
+        this.nullCredit = nullCredit;
+    }
+
+    private double nullCredit = 0;
+    public double GPACalculator(HashMap courses)
     {
         int i;
         if (takenCourses.isEmpty())
@@ -103,10 +150,57 @@ public abstract class Students {
             {
                 Map.Entry me = (Map.Entry) itr1.next();
                 Map.Entry me2 = (Map.Entry) itr2.next();
-                if (me2.getKey() == me.getKey() && me.getValue() != null)
+                if(me.getValue()!=null)
                 {
                     double d = (int) me.getValue();
                     double dd = (int) me2.getValue();
+
+                    if(me2.getKey() == me.getKey() && me.getValue() != null)
+                    {
+                        if (d <= 100 && d >= 90)
+                        {
+                            gpa = gpa + 4.0;
+                        }
+                        else if (d >= 85 && d <= 89)
+                        {
+                            gpa = gpa + 3.5;
+                        }
+                        else if (d >= 80 && d <= 84)
+                        {
+                            gpa = gpa + 3.0;
+                        }
+                        else if (d >= 75 && d <= 79)
+                        {
+                            gpa = gpa + 2.5;
+                        }
+                        else if (d >= 65 && d <= 74)
+                        {
+                            gpa = gpa + 2.0;
+                        }
+                        else if (d >= 60 && d <= 64)
+                        {
+                            gpa = gpa + 1.5;
+                        }
+                        else if (d >= 55 && d <= 59)
+                        {
+                            gpa = gpa + 1.0;
+                        }
+                        else if (d >= 50 && d <= 54)
+                        {
+                            gpa = gpa + 0.5;
+                        }
+                        else if (d >= 0 && d <= 49)
+                        {
+                            gpa = gpa + 0;
+                        }
+                        credit = credit + dd;
+                    }
+                }
+
+            }
+                /*if (me2.getKey() == me.getKey() && me.getValue() != null)
+                {
+
                     gpa = (gpa + (dd * d));
                 }
             }
@@ -122,8 +216,13 @@ public abstract class Students {
             }
 
             gpa = gpa / count;
-            System.out.println(gpa);
+            System.out.println(gpa);*/
         }
+        gpa = gpa / credit;
+        System.out.println("GPA: "+ gpa);
+        credit = 0;
+        System.out.println("keremin");
+        return gpa;
 
     }
 

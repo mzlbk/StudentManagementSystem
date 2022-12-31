@@ -8,28 +8,27 @@ public class HeadOfDepartment extends Lecturer
 
     //BURASI MEZUNİYET BELGESİ VERME ŞEYSİ
 
-    /*
+
     private int courseNum=0;
-    public void giveCertificate(UndergraduateStudent student){
-        student.getTakenCourse().forEach((lesson,grade) -> {
-            if(lesson != null && grade != null && student.controlSuccessfully(lesson)==true){
-                courseNum++;
-            }
-        });
+    public void giveCertificate(Students student)
+    {
+        if(student.)
+        int courseNum = student.getTakenCourses().size();
 
+        if(courseNum>=3 && student.getGpa()>=0.5)
+        {
 
-        if(courseNum>=40 && student.CalculateGPA()>=2.0){
-            System.out.println("Congratulations you take a certificate");
-            System.out.println(student.toString());
+            System.out.println("Congratulations you take a certificate " + student.getName() + " " + student.getSurname());
             courseNum=0;
         }
         else{
+            //System.out.println(student.GPACalculator(student.getCreditCourses()));
             System.out.println("This student does not meet the conditions to get certificate");
             courseNum=0;
         }
     }
 
-    public void giveCertificate(GraduateStudent student){ //Method overloading
+    /*public void giveCertificate(GraduateStudent student){ //Method overloading
         if(student.getDegree()=="MASTER"){
             student.getTakenCourse().forEach((lesson,grade) -> {
                 if(lesson != null && grade != null && student.controlSuccessfully(lesson)==true){
@@ -64,7 +63,7 @@ public class HeadOfDepartment extends Lecturer
                 courseNum=0;
             }
         }
-    }
-    */
+    }*/
+
 
 }

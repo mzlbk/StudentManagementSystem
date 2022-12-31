@@ -7,14 +7,17 @@ public class Main
         LecturerRooms lecturerRoom1 = new LecturerRooms(42);
         LecturerRooms lecturerRoom2 = new LecturerRooms(54);
 
+        HeadOfDepartment headOfDepartment = new HeadOfDepartment(3,"BAŞHOCA",8, "HOCA","HOCA",lecturerRoom1);
+
         //Creating Students
-        UndergraduateStudents undergraduateStudents1 = new UndergraduateStudents(1, "Hayrullah", "Gamşullah", 2020, "undergraduate");
-        UndergraduateStudents undergraduateStudents2 = new UndergraduateStudents(2, "Hayriye", "Yılmaz", 2022, "doctora");
+        Students undergraduateStudents1 = new UndergraduateStudents(1, "Hayrullah", "Gamşullah", 2020, "undergraduate");
+        Students undergraduateStudents2 = new UndergraduateStudents(2, "Hayriye", "Yılmaz", 2022, "doctora");
 
         //Creating courses
         UndergraduateCourses courses1 = new UndergraduateCourses("MATHEMATIC", 101, 4);
         UndergraduateCourses courses2 = new UndergraduateCourses("PHYSICS", 102, 4);
         UndergraduateCourses courses3 = new UndergraduateCourses("PROGRAMMING",103,2);
+        UndergraduateCourses courses4 = new UndergraduateCourses("A",104,2);
 
         //Showing student id, name, surname and entry year
         System.out.println("Students Infos");
@@ -31,6 +34,7 @@ public class Main
         sekreter.addCourse(lecturer1, courses1);
         sekreter.addCourse(lecturer2, courses2);
         sekreter.addCourse(lecturer1, courses3);
+        sekreter.addCourse(lecturer1,courses4);
 
         //Also secretary can change the course lecturer
         sekreter.changeLecturer(lecturer2, courses1);
@@ -38,17 +42,22 @@ public class Main
         //Adding courses for students
         undergraduateStudents1.addCourse(courses1);
         undergraduateStudents1.addCourse(courses2);
+        undergraduateStudents1.addCourse(courses3);
         undergraduateStudents2.addCourse(courses1);
         undergraduateStudents2.addCourse(courses2);
         undergraduateStudents2.addCourse(courses3);
+        undergraduateStudents2.addCourse(courses4);
 
         //Lecturers can add notes for the students who are the take him/her course
         System.out.println();
         System.out.println("Adding notes");
         lecturer1.assignGrade(courses1, undergraduateStudents1, 100);
-        lecturer1.assignGrade(courses2, undergraduateStudents1, 70);
-        lecturer2.assignGrade(courses1, undergraduateStudents2, 35);
+        lecturer2.assignGrade(courses2, undergraduateStudents1, 100);
+        lecturer1.assignGrade(courses3,undergraduateStudents1,100);
+        lecturer1.assignGrade(courses1, undergraduateStudents2, 35);
         lecturer2.assignGrade(courses2, undergraduateStudents2, 35);
+        //lecturer1.assignGrade(courses3,undergraduateStudents2,100);
+        lecturer1.assignGrade(courses4,undergraduateStudents2,100);
 
         //Calculating the gpa
         System.out.println();
@@ -68,6 +77,8 @@ public class Main
         undergraduateStudents1.getGrade(courses2);
         //undergraduateStudents.addCourse();
         //System.out.println(sekreter.getStaffID());
+
+        headOfDepartment.giveCertificate(undergraduateStudents1);
 
         System.out.println();
         System.out.println("Students and their notes");
